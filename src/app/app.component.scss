@@ -31,7 +31,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200px;
+    width: 300px;
     height: 50px;
     background-color: #f0f0f0;
     color: #888;
@@ -43,3 +43,92 @@
   .content {
     padding: 1rem;
   }
+
+
+  /* Trigger Button */
+.open-modal-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.open-modal-button:hover {
+  background-color: #0056b3;
+}
+
+/* Modal Styling */
+.custom-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 90%;
+  max-width: 400px;
+  display: none; /* Hidden by default */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.custom-modal.show {
+  display: block;
+}
+
+/* Backdrop */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+.modal-backdrop.show {
+  display: block;
+}
+
+/* Modal Content */
+.custom-modal-content h2 {
+  margin-top: 0;
+}
+
+.custom-modal-content p {
+  margin: 10px 0;
+}
+
+.contact-links a {
+  display: inline-block;
+  margin: 10px 0;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
+
+/* Close Button */
+.close-modal-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.close-modal-button:hover {
+  background-color: #b02a37;
+}
