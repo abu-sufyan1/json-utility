@@ -1,0 +1,15 @@
+<div class="container mt-3">
+    <h2>JSON Stringify</h2>
+    <textarea
+      [(ngModel)]="inputObject"
+      rows="10"
+      class="form-control"
+      placeholder="Enter Object here"
+    ></textarea>
+    <button (click)="stringifyObject()" class="btn btn-success mt-2">
+      Stringify Object
+    </button>
+    <h4 class="mt-3">JSON String:</h4>
+    <pre>{{ jsonString }}</pre>
+  </div>
+  
