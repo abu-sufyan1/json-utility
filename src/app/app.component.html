@@ -5,6 +5,11 @@
       <a routerLink="/json-stringify" routerLinkActive="active">JSON Stringify</a>
       <a routerLink="/json-typescript-model" routerLinkActive="active">JSON to TypeScript Model</a>
     </div>
+    <div>
+      <a routerLinkActive="active">
+        <button class="open-modal-button" (click)="openContactModal()">Contact Us</button>
+      </a>
+    </div>
     <div class="ad-space">Ad Space</div>
   </nav>
 
@@ -12,3 +17,16 @@
   <div class="content">
     <router-outlet></router-outlet>
   </div>
+
+  <div class="custom-modal" [class.show]="isModalOpen">
+    <div class="custom-modal-content">
+      <h2>Contact Us</h2>
+      <p>How can we help you? Choose an option below:</p>
+      <div class="contact-links">
+        <a [href]="emailLink">Email Developer</a><br>
+        <a [href]="githubIssueLink" target="_blank">Report Issue on GitHub</a>
+      </div>
+      <button class="close-modal-button" (click)="closeContactModal()">Close</button>
+    </div>
+  </div>
+  <div class="modal-backdrop" [class.show]="isModalOpen" (click)="closeContactModal()"></div>
