@@ -1,1 +1,14 @@
-<app-json-formatter></app-json-formatter>
+ <!-- Navigation Bar -->
+ <nav class="navbar">
+    <div class="nav-links">
+      <a routerLink="json-formatter" routerLinkActive="active">JSON Formatter</a>
+      <a routerLink="/json-stringify" routerLinkActive="active">JSON Stringify</a>
+      <a routerLink="/json-typescript-model" routerLinkActive="active">JSON to TypeScript Model</a>
+    </div>
+    <div class="ad-space">Ad Space</div>
+  </nav>
+
+  <!-- Placeholder for Angular Router Outlet -->
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>

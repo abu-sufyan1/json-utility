@@ -1,0 +1,17 @@
+<div class="container mt-3">
+    <h2>JSON Formatter</h2>
+    <textarea
+      [(ngModel)]="jsonInput"
+      rows="10"
+      class="form-control"
+      placeholder="Enter JSON here"
+    ></textarea>
+    <button (click)="formatJson()" class="btn btn-primary mt-2">
+      Format JSON
+    </button>
+    <!-- <div *ngIf="formattedJson"> -->
+        <h4 class="mt-3">Formatted Output:</h4>
+        <pre>{{ formattedJson }}</pre>
+    <!-- </div> -->
+  </div>
+  
