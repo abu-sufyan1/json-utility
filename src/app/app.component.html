@@ -1,9 +1,9 @@
  <!-- Navigation Bar -->
  <nav class="navbar">
     <div class="nav-links">
-      <a routerLink="json-formatter" routerLinkActive="active">JSON Formatter</a>
-      <a routerLink="/json-stringify" routerLinkActive="active">JSON Stringify</a>
-      <a routerLink="/json-typescript-model" routerLinkActive="active">JSON to TypeScript Model</a>
+      <a routerLink="json-formatter" routerLinkActive="active" href="/json-formatter">JSON Formatter</a>
+      <a routerLink="/json-stringify" routerLinkActive="active" href="/json-stringify">JSON Stringify</a>
+      <a routerLink="/json-typescript-model" routerLinkActive="active" href="/json-typescript-model">JSON to TypeScript Model</a>
     </div>
     <div>
       <a routerLinkActive="active">
@@ -20,10 +20,10 @@
 
   <div class="custom-modal" [class.show]="isModalOpen">
     <div class="custom-modal-content">
-      <h2>Contact Us</h2>
+      <h3>Contact Us</h3>
       <p>How can we help you? Choose an option below:</p>
       <div class="contact-links">
-        <a [href]="emailLink">Email Developer</a><br>
+        <a [href]="emailLink">Email Developer</a><br/>
         <a [href]="githubIssueLink" target="_blank">Report Issue on GitHub</a>
       </div>
       <button class="close-modal-button" (click)="closeContactModal()">Close</button>

@@ -4,8 +4,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #2e7d32;
+    color: #ffffff;
     padding: 0.5rem 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
@@ -33,8 +33,8 @@
     justify-content: center;
     width: 300px;
     height: 50px;
-    background-color: #f0f0f0;
-    color: #888;
+    background-color: #b0bec5;
+    color: #1a1a1a;
     font-size: 0.9rem;
     border: 1px dashed #ccc;
   }
@@ -109,8 +109,9 @@
   display: inline-block;
   margin: 10px 0;
   text-decoration: none;
-  color: #007bff;
+  color: #1565c0;
   font-weight: bold;
+  line-height: 0.5;
 }
 
 .contact-links a:hover {
