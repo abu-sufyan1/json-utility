@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-json-typescript-model',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './json-typescript-model.component.html',
   styleUrls: ['./json-typescript-model.component.scss']
 })
@@ -17,9 +18,20 @@ export class JsonTypescriptModelComponent {
       const jsonObj = JSON.parse(this.jsonInput);
       const interfaces = new Map<string, string>();
       this.generateTypeScriptModel(jsonObj, 'Root', interfaces);
-      this.tsModel = Array.from(interfaces.values()).join('\n\n') + '\n';
+      this.tsModel = Array.from(interfaces.values()).join('\n\n').trim() + '\n';
     } catch (error) {
       this.tsModel = 'Invalid JSON';
+    }
+  }
+
+  public copyCode() {
+    const codeBlock = document.getElementById('codeBlock')?.innerText;
+    if (codeBlock) {
+      navigator.clipboard.writeText(codeBlock).then(() => {
+        alert('Code copied to clipboard!');
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+      });
     }
   }
 

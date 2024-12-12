@@ -1,41 +1,68 @@
 /* Similar to JSON Formatter CSS */
 .container {
-    margin-top: 1rem;
-    max-width: 600px;
-  }
-  
-  textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-    font-family: monospace;
-  }
-  
-  textarea:focus {
-    border-color: #80bdff;
-    outline: 0;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
-  }
-  
-  .btn {
-    padding: 0.5rem 1rem;
-    background-color: #17a2b8;
-    border: none;
-    border-radius: 0.25rem;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .btn:hover {
-    background-color: #138496;
-  }
-  
-  pre {
-    background: #f8f9fa;
-    padding: 1rem;
-    border: 1px solid #dee2e6;
-    border-radius: 0.25rem;
-    overflow-x: auto;
-  }
-  
+  margin-top: 1rem;
+  max-width: 600px;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  font-family: monospace;
+}
+
+textarea:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  background-color: #0d47a1;
+  border: none;
+  border-radius: 0.25rem;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #138496;
+}
+
+pre {
+  background: #f8f9fa;
+  padding: 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  overflow-x: auto;
+}
+
+.code-container {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 80vw;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.copy-btn:hover {
+  background-color: #0056b3;
+}

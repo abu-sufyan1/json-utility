@@ -1,32 +1,31 @@
- <!-- Navigation Bar -->
- <nav class="navbar">
-    <div class="nav-links">
-      <a routerLink="json-formatter" routerLinkActive="active" href="/json-formatter">JSON Formatter</a>
-      <a routerLink="/json-stringify" routerLinkActive="active" href="/json-stringify">JSON Stringify</a>
-      <a routerLink="/json-typescript-model" routerLinkActive="active" href="/json-typescript-model">JSON to TypeScript Model</a>
-    </div>
-    <div>
-      <a routerLinkActive="active">
-        <button class="open-modal-button" (click)="openContactModal()">Contact Us</button>
-      </a>
-    </div>
-    <div class="ad-space">Ad Space</div>
-  </nav>
-
-  <!-- Placeholder for Angular Router Outlet -->
-  <div class="content">
-    <router-outlet></router-outlet>
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="nav-links">
+    <!-- <a routerLink="json-formatter" routerLinkActive="active" href="/json-formatter">JSON Formatter</a>
+      <a routerLink="/json-stringify" routerLinkActive="active" href="/json-stringify">JSON Stringify</a> -->
+    <a routerLink="/" routerLinkActive="active" href="/">JSON to TypeScript Model</a>
+    <button class="open-modal-button" (click)="openContactModal()">Contact Us</button>
   </div>
+  <!-- <div>
+      
+    </div> -->
+  <div class="ad-space">Ad Space</div>
+</nav>
 
-  <div class="custom-modal" [class.show]="isModalOpen">
-    <div class="custom-modal-content">
-      <h3>Contact Us</h3>
-      <p>How can we help you? Choose an option below:</p>
-      <div class="contact-links">
-        <a [href]="emailLink">Email Developer</a><br/>
-        <a [href]="githubIssueLink" target="_blank">Report Issue on GitHub</a>
-      </div>
-      <button class="close-modal-button" (click)="closeContactModal()">Close</button>
+<!-- Placeholder for Angular Router Outlet -->
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+
+<div class="custom-modal" [class.show]="isModalOpen">
+  <div class="custom-modal-content">
+    <h3>Contact Us</h3>
+    <p>How can we help you? Choose an option below:</p>
+    <div class="contact-links">
+      <a [href]="emailLink">Email Developer</a><br />
+      <a [href]="githubIssueLink" target="_blank">Report Issue on GitHub</a>
     </div>
+    <button class="close-modal-button" (click)="closeContactModal()">Close</button>
   </div>
-  <div class="modal-backdrop" [class.show]="isModalOpen" (click)="closeContactModal()"></div>
+</div>
+<div class="modal-backdrop" [class.show]="isModalOpen" (click)="closeContactModal()"></div>

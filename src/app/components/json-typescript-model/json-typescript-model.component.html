@@ -1,15 +1,18 @@
 <div class="container mt-3">
-    <h3>JSON to TypeScript Model</h3>
-    <textarea
-      [(ngModel)]="jsonInput"
-      rows="10"
-      class="form-control"
-      placeholder="Enter JSON here"
-    ></textarea>
-    <button (click)="generateModel()" class="btn btn-info mt-2">
-      Generate Model
-    </button>
-    <h4 class="mt-3">Generated TypeScript Model:</h4>
-    <pre>{{ tsModel }}</pre>
+  <h3>JSON to TypeScript Model</h3>
+  <textarea [(ngModel)]="jsonInput" rows="20" style="width:80vw" class="form-control"
+    placeholder="Enter JSON here"></textarea>
+  <br /><br />
+  <button (click)="generateModel()" class="btn btn-info mt-2">
+    Generate Model
+  </button>
+  <h4 class="mt-3">Generated TypeScript Model:</h4>
+  <div class="code-container" *ngIf="tsModel">
+    <pre id="codeBlock">
+      <code>
+        {{ tsModel }}
+      </code>
+    </pre>
+    <button class="copy-btn" (click)="copyCode()">Copy</button>
   </div>
-  
+</div>
