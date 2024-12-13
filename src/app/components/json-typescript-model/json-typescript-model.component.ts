@@ -42,8 +42,8 @@ export class JsonTypescriptModelComponent {
 
     if (Array.isArray(jsonObj)) {
       const arrayType = this.determineArrayType(jsonObj, interfaces);
-      interfaces.set(modelName, `interface ${modelName} {
-  public items: ${arrayType}[];
+      interfaces.set(modelName, `export interface ${modelName} {
+  items: ${arrayType}[];
 }`);
       return;
     }
@@ -55,19 +55,19 @@ export class JsonTypescriptModelComponent {
           if (!interfaces.has(nestedModelName)) {
             this.generateTypeScriptModel(value, nestedModelName, interfaces);
           }
-          return `  public ${key}: ${nestedModelName};`;
+          return `  ${key}: ${nestedModelName};`;
         } else if (Array.isArray(value) && typeof value[0] === 'object') {
           const nestedModelName = this.capitalize(key.slice(0, -1));
           if (!interfaces.has(nestedModelName)) {
             this.generateTypeScriptModel(value[0], nestedModelName, interfaces);
           }
-          return `  public ${key}: ${nestedModelName}[];`;
+          return `  ${key}: ${nestedModelName}[];`;
         }
-        return `  public ${key}: ${this.determineType(value)};`;
+        return `  ${key}: ${this.determineType(value)};`;
       })
       .join('\n');
 
-    interfaces.set(modelName, `interface ${modelName} {
+    interfaces.set(modelName, `export interface ${modelName} {
 ${properties}
 }`);
   }
